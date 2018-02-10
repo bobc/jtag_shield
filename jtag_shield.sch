@@ -1,115 +1,19 @@
 EESchema Schematic File Version 2
-LIBS:arduino_shieldsNCL
-LIBS:opendous
-LIBS:RMC
-LIBS:MCU_Atmel_AVR
-LIBS:Connector_Specialized
-LIBS:MCU_Module
-LIBS:74xgxx
-LIBS:74xx
-LIBS:ac-dc
-LIBS:actel
-LIBS:adc-dac
-LIBS:allegro
-LIBS:Altera
-LIBS:analog_devices
-LIBS:analog_switches
-LIBS:atmel
-LIBS:audio
-LIBS:battery_management
-LIBS:bbd
-LIBS:bosch
-LIBS:brooktre
-LIBS:cmos4000
-LIBS:cmos_ieee
-LIBS:conn
-LIBS:contrib
-LIBS:cypress
-LIBS:dc-dc
-LIBS:device
-LIBS:digital-audio
-LIBS:diode
-LIBS:display
-LIBS:dsp
-LIBS:elec-unifil
-LIBS:ESD_Protection
-LIBS:ftdi
-LIBS:gennum
-LIBS:graphic
-LIBS:hc11
-LIBS:intel
-LIBS:interface
-LIBS:ir
-LIBS:Lattice
-LIBS:leds
-LIBS:linear
-LIBS:logo
-LIBS:maxim
-LIBS:mechanical
-LIBS:memory
-LIBS:microchip
-LIBS:microchip_dspic33dsc
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic24mcu
-LIBS:microchip_pic32mcu
-LIBS:microcontrollers
-LIBS:modules
-LIBS:motorola
-LIBS:motors
-LIBS:motor_drivers
-LIBS:msp430
-LIBS:nordicsemi
-LIBS:nxp
-LIBS:nxp_armmcu
-LIBS:onsemi
-LIBS:opto
-LIBS:Oscillators
-LIBS:philips
-LIBS:power
-LIBS:powerint
-LIBS:Power_Management
-LIBS:pspice
-LIBS:references
-LIBS:regul
-LIBS:relays
-LIBS:rfcom
-LIBS:sensors
-LIBS:silabs
-LIBS:siliconi
-LIBS:stm32
-LIBS:stm8
-LIBS:supertex
-LIBS:switches
-LIBS:texas
-LIBS:transf
-LIBS:transistors
-LIBS:triac_thyristor
-LIBS:ttl_ieee
-LIBS:valves
-LIBS:video
-LIBS:wiznet
-LIBS:Worldsemi
-LIBS:Xicor
-LIBS:xilinx
-LIBS:zetex
-LIBS:Zilog
+LIBS:jtag_shield
 LIBS:jtag_shield-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "JTAG HAT SHIELD for the Arduino Mega"
+Date "2018-02-09"
+Rev "1.0"
 Comp ""
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "From original idea by THDplusN_bad"
+Comment4 "Drawn by : Bob Cousins, Magnus aka THDplusN_bad"
 $EndDescr
 $Comp
 L ARDUINO_DUE_SHIELD SHIELD1
@@ -133,10 +37,6 @@ F 3 "" H 1800 2350 50  0001 C CNN
 	1    1800 2350
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1800 2150 1800 2350
-Wire Wire Line
-	2200 2150 1800 2150
 $Comp
 L GND #PWR02
 U 1 1 5A7C21F0
@@ -148,13 +48,6 @@ F 3 "" H 1800 4600 50  0001 C CNN
 	1    1800 4600
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 4500 1800 4500
-Wire Wire Line
-	1800 4400 1800 4600
-Wire Wire Line
-	2200 4400 1800 4400
-Connection ~ 1800 4500
 $Comp
 L +5V #PWR03
 U 1 1 5A7C2220
@@ -166,10 +59,6 @@ F 3 "" H 1800 1800 50  0001 C CNN
 	1    1800 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1800 1800 1800 2050
-Wire Wire Line
-	1800 2050 2200 2050
 $Comp
 L +5V #PWR04
 U 1 1 5A7C22AA
@@ -181,13 +70,6 @@ F 3 "" H 4500 4150 50  0001 C CNN
 	1    4500 4150
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	4500 4150 4500 4500
-Wire Wire Line
-	4500 4400 4100 4400
-Wire Wire Line
-	4500 4500 4100 4500
-Connection ~ 4500 4400
 $Comp
 L +5V #PWR05
 U 1 1 5A7C22FF
@@ -199,8 +81,6 @@ F 3 "" H 5500 1200 50  0001 C CNN
 	1    5500 1200
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 1200 5500 1350
 Text Label 6250 1750 0    50   ~ 0
 RESET
 Text Label 6400 1850 2    50   ~ 0
@@ -211,20 +91,8 @@ Text Label 6400 1950 2    50   ~ 0
 TMS
 Text Label 6400 2150 2    50   ~ 0
 TDI
-Wire Wire Line
-	6400 1850 6100 1850
-Wire Wire Line
-	6400 2050 6100 2050
-Wire Wire Line
-	6400 1950 6100 1950
-Wire Wire Line
-	6400 2150 6100 2150
-Wire Wire Line
-	6100 1750 6250 1750
 Text Label 1950 1850 0    50   ~ 0
 RESET
-Wire Wire Line
-	1950 1850 2200 1850
 Text Label 1950 2950 0    50   ~ 0
 TCK
 Text Label 1950 3150 0    50   ~ 0
@@ -233,14 +101,6 @@ Text Label 1950 3050 0    50   ~ 0
 TMS
 Text Label 1950 3250 0    50   ~ 0
 TDI
-Wire Wire Line
-	1950 2950 2200 2950
-Wire Wire Line
-	1950 3050 2200 3050
-Wire Wire Line
-	1950 3150 2200 3150
-Wire Wire Line
-	1950 3250 2200 3250
 NoConn ~ 4100 1650
 NoConn ~ 4100 1750
 NoConn ~ 4100 1850
@@ -314,55 +174,49 @@ NoConn ~ 4100 1450
 $Comp
 L +5V #PWR06
 U 1 1 5A7C2D34
-P 6450 3300
-F 0 "#PWR06" H 6450 3150 50  0001 C CNN
-F 1 "+5V" H 6450 3440 50  0000 C CNN
-F 2 "" H 6450 3300 50  0001 C CNN
-F 3 "" H 6450 3300 50  0001 C CNN
-	1    6450 3300
+P 7750 3350
+F 0 "#PWR06" H 7750 3200 50  0001 C CNN
+F 1 "+5V" H 7750 3490 50  0000 C CNN
+F 2 "" H 7750 3350 50  0001 C CNN
+F 3 "" H 7750 3350 50  0001 C CNN
+	1    7750 3350
 	-1   0    0    -1  
 $EndComp
 $Comp
 L LED D1
 U 1 1 5A7C2D45
-P 6450 3450
-F 0 "D1" H 6450 3550 50  0000 C CNN
-F 1 "LED" H 6450 3350 50  0000 C CNN
-F 2 "LEDs:LED_D3.0mm" H 6450 3450 50  0001 C CNN
-F 3 "" H 6450 3450 50  0001 C CNN
-	1    6450 3450
+P 7750 3500
+F 0 "D1" H 7750 3600 50  0000 C CNN
+F 1 "LED" H 7750 3400 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 7750 3500 50  0001 C CNN
+F 3 "" H 7750 3500 50  0001 C CNN
+	1    7750 3500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R1
 U 1 1 5A7C2D8A
-P 6450 3850
-F 0 "R1" V 6530 3850 50  0000 C CNN
-F 1 "470R" V 6600 3850 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6380 3850 50  0001 C CNN
-F 3 "" H 6450 3850 50  0001 C CNN
-	1    6450 3850
+P 7750 3900
+F 0 "R1" V 7830 3900 50  0000 C CNN
+F 1 "470R" V 7900 3900 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7680 3900 50  0001 C CNN
+F 3 "" H 7750 3900 50  0001 C CNN
+	1    7750 3900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6450 3600 6450 3700
 $Comp
 L GND #PWR07
 U 1 1 5A7C2E31
-P 6450 4150
-F 0 "#PWR07" H 6450 3900 50  0001 C CNN
-F 1 "GND" H 6450 4000 50  0000 C CNN
-F 2 "" H 6450 4150 50  0001 C CNN
-F 3 "" H 6450 4150 50  0001 C CNN
-	1    6450 4150
+P 7750 4200
+F 0 "#PWR07" H 7750 3950 50  0001 C CNN
+F 1 "GND" H 7750 4050 50  0000 C CNN
+F 2 "" H 7750 4200 50  0001 C CNN
+F 3 "" H 7750 4200 50  0001 C CNN
+	1    7750 4200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6450 4000 6450 4150
-Text Label 5150 4300 0    50   ~ 0
+Text Label 4850 4300 0    50   ~ 0
 TDI
-Wire Wire Line
-	5150 4300 5300 4300
 $Comp
 L BF245A Q1
 U 1 1 5A7C2FF8
@@ -407,10 +261,6 @@ F 3 "" H 5600 3850 50  0001 C CNN
 	1    5600 3850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 3600 5600 3700
-Wire Wire Line
-	5600 4000 5600 4050
 $Comp
 L GND #PWR09
 U 1 1 5A7C3271
@@ -422,8 +272,6 @@ F 3 "" H 5600 4600 50  0001 C CNN
 	1    5600 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 4450 5600 4600
 $Comp
 L +5V #PWR010
 U 1 1 5A7C42D1
@@ -446,19 +294,9 @@ F 3 "" H 1950 6750 50  0001 C CNN
 	1    1950 6750
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 6650 1950 6650
-Wire Wire Line
-	1950 6650 1950 6750
-Wire Wire Line
-	2200 6450 1950 6450
-Wire Wire Line
-	1950 6450 1950 6350
 NoConn ~ 2200 1650
 Text Label 1950 6550 0    50   ~ 0
 RESET
-Wire Wire Line
-	1950 6550 2200 6550
 $Comp
 L AVR-ISP-6 J2
 U 1 1 5A7C47BA
@@ -492,18 +330,6 @@ F 3 "" H 5600 2650 50  0001 C CNN
 	1    5600 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 1350 5600 1250
-Wire Wire Line
-	5600 1250 5500 1250
-Connection ~ 5500 1250
-Wire Wire Line
-	5600 2550 5600 2650
-Wire Wire Line
-	6100 1650 6150 1650
-Wire Wire Line
-	6150 1650 6150 1750
-Connection ~ 6150 1750
 $Comp
 L GND #PWR013
 U 1 1 5A7C4DF4
@@ -526,38 +352,156 @@ F 3 "" H 5600 5250 50  0001 C CNN
 	1    5600 5250
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 6250 5600 6350
-Wire Wire Line
-	5600 5250 5600 5350
 Text Label 6200 5950 0    50   ~ 0
 RESET
-Wire Wire Line
-	6200 5950 6100 5950
 Text Label 6200 5650 0    50   ~ 0
 MISO
 Text Label 6200 5750 0    50   ~ 0
 MOSI
 Text Label 6200 5850 0    50   ~ 0
 SCK
-Wire Wire Line
-	6100 5650 6200 5650
-Wire Wire Line
-	6100 5750 6200 5750
-Wire Wire Line
-	6100 5850 6200 5850
 Text Label 4200 6550 0    50   ~ 0
 MISO
 Text Label 4200 6450 0    50   ~ 0
 MOSI
 Text Label 4200 6650 0    50   ~ 0
 SCK
+NoConn ~ 4100 1150
+NoConn ~ 4100 1250
+$Comp
+L R R3
+U 1 1 5A7D692C
+P 5150 4300
+F 0 "R3" V 5250 4300 50  0000 C CNN
+F 1 "47k" V 5350 4300 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 4300 50  0001 C CNN
+F 3 "" H 5150 4300 50  0001 C CNN
+	1    5150 4300
+	0    1    1    0   
+$EndComp
+Text Notes 8000 3550 0    50   ~ 10
+5V SUPPLY
+Text Notes 4900 3500 0    50   ~ 10
+JTAG ACTIVITY
+Wire Wire Line
+	1800 2150 1800 2350
+Wire Wire Line
+	2200 2150 1800 2150
+Wire Wire Line
+	2200 4500 1800 4500
+Wire Wire Line
+	1800 4400 1800 4600
+Wire Wire Line
+	2200 4400 1800 4400
+Connection ~ 1800 4500
+Wire Wire Line
+	1800 1800 1800 2050
+Wire Wire Line
+	1800 2050 2200 2050
+Wire Wire Line
+	4500 4150 4500 4500
+Wire Wire Line
+	4500 4400 4100 4400
+Wire Wire Line
+	4500 4500 4100 4500
+Connection ~ 4500 4400
+Wire Wire Line
+	5500 1200 5500 1350
+Wire Wire Line
+	6400 1850 6100 1850
+Wire Wire Line
+	6400 2050 6100 2050
+Wire Wire Line
+	6400 1950 6100 1950
+Wire Wire Line
+	6400 2150 6100 2150
+Wire Wire Line
+	6100 1750 6250 1750
+Wire Wire Line
+	1950 1850 2200 1850
+Wire Wire Line
+	1950 2950 2200 2950
+Wire Wire Line
+	1950 3050 2200 3050
+Wire Wire Line
+	1950 3150 2200 3150
+Wire Wire Line
+	1950 3250 2200 3250
+Wire Wire Line
+	7750 3650 7750 3750
+Wire Wire Line
+	7750 4050 7750 4200
+Wire Wire Line
+	4850 4300 5000 4300
+Wire Wire Line
+	5600 3600 5600 3700
+Wire Wire Line
+	5600 4000 5600 4050
+Wire Wire Line
+	5600 4450 5600 4600
+Wire Wire Line
+	2200 6650 1950 6650
+Wire Wire Line
+	1950 6650 1950 6750
+Wire Wire Line
+	2200 6450 1950 6450
+Wire Wire Line
+	1950 6450 1950 6350
+Wire Wire Line
+	1950 6550 2200 6550
+Wire Wire Line
+	5600 1350 5600 1250
+Wire Wire Line
+	5600 1250 5500 1250
+Connection ~ 5500 1250
+Wire Wire Line
+	5600 2550 5600 2650
+Wire Wire Line
+	6100 1650 6150 1650
+Wire Wire Line
+	6150 1650 6150 1750
+Connection ~ 6150 1750
+Wire Wire Line
+	5600 6250 5600 6350
+Wire Wire Line
+	5600 5250 5600 5350
+Wire Wire Line
+	6200 5950 6100 5950
+Wire Wire Line
+	6100 5650 6200 5650
+Wire Wire Line
+	6100 5750 6200 5750
+Wire Wire Line
+	6100 5850 6200 5850
 Wire Wire Line
 	4100 6450 4200 6450
 Wire Wire Line
 	4100 6550 4200 6550
 Wire Wire Line
 	4100 6650 4200 6650
-NoConn ~ 4100 1150
-NoConn ~ 4100 1250
+Connection ~ 5600 4500
+Connection ~ 5600 3300
+Wire Wire Line
+	5600 3300 6300 3300
+Wire Wire Line
+	5600 4500 6300 4500
+Wire Wire Line
+	6300 4500 6300 4400
+$Comp
+L C C1
+U 1 1 5A7D751F
+P 6300 4250
+F 0 "C1" H 6325 4350 50  0000 L CNN
+F 1 "100n" H 6325 4150 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 6338 4100 50  0001 C CNN
+F 3 "" H 6300 4250 50  0001 C CNN
+	1    6300 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3300 6300 4100
+Text Notes 750  3150 0    50   ~ 10
+AD4 to AD7 are not available \nwhen JTAG is enabled
+Text Notes 6800 1500 0    50   Italic 10
+Application note: \n\nJTAG setup\n- Cut the RESET-EN connection to disable Auto-reset (2mm-jumper recommended)\n- Program the JTAGEN fuse to enable the JTAG test access port/TAP
 $EndSCHEMATC
